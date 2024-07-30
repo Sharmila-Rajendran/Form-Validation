@@ -12,12 +12,24 @@ function Validation(){
         alert("Please enter your last name");
         return false;
     }
+    else if(Mail===null || Mail===""){
+        alert("Please enter a valid email");
+        return false;
+    }
+    else if(Mail===(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)){
+        alert("Please enter a valid email");
+        return false;
+    }
     else if(City===null || City===""){
         alert("Please enter your city");
         return false;
     }
     else if(mobile===null || mobile===""){
         alert("Please enter your mobile number");
+        return false;
+    }
+    else if(mobile.length!==10){
+        alert("Please enter a valid mobile number");
         return false;
     }
     else if(address===null || address===""){
